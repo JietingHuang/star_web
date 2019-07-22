@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <link rel="stylesheet" type="text/css" href="register.css" >
+</head>
+<body>
+    <form action="reg.php" method="post" onsubmit="return check()" name="myform">
+        <div class="form">
+            <div class="one">
+                <h3>用户注册</h3>
+            </div>
+          
+            <div class="two">
+                <input class="input" type="text" name="username" id="username" placeholder="用户名" autofocus />
+            </div>
+            <div class="two">
+                <input class="input" type="password" name="password" id="password" placeholder="密码" />
+            </div>
+            <div class="two">
+                <input class="input" type="password" name="repassword" id="repassword" placeholder="确认密码" />
+            </div>
+            <div class="two">
+                <input class="input" type="text" name="unum" id="unum" placeholder="注册邮箱/手机号" />
+            </div>
+
+            <div class="three">  
+                <a href="index.php">返回首页</a>
+            </div> 
+
+            <div class="four">
+                <input class="button" type="submit" value="注册" />      
+            </div>   
+        </div>  
+    </form>
+    <script src="register.js" ></script>
+</body>
+</html>

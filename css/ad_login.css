@@ -1,0 +1,76 @@
+﻿*{margin: 0;padding: 0;}
+        body{
+            background-image: url(../star_web/img/000.jpg);
+            background-size: cover;
+        }
+        .container{
+            margin:100px auto;
+            width: 450px;
+            background-color: rgba(45,45,45,.15);
+            border-radius: 25px;
+        }
+        .one{
+            font-family: "宋体";
+            margin: 20px;
+            padding-top: 20px;
+            padding-bottom: 30px;
+            text-align: center;
+            height: 30px;
+            border-bottom: 1px solid #aaa;
+            font-size: 32px;
+            color:#fff;
+            letter-spacing: 0.2em;
+        }
+        a:hover{
+            color: #EF9204;
+            border-bottom: 2px solid #EF6204;
+        }
+        .two{
+            text-align: center;
+            margin-top: 30px;
+        }
+        .three{
+            margin-top: 18px;
+            font-size: 20px;
+            color: #634F54;
+            padding-left: 55px;
+        }
+        .three a{
+            text-decoration: none;
+            color: #656;
+            float: right;
+            display: block;
+            padding-right: 55px;
+            border: 0px;
+            letter-spacing: 0.1em;
+        }
+        .three a:hover{
+            color:#989;
+        }
+        .input{
+            width: 340px;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid #aaa;
+            font-size: 16px;
+            text-indent: 1em;
+        }
+        .four{
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .button{
+            margin-top: 11px;
+            width: 340px;
+            height: 55px;
+            background-color:#636;
+            border:1px solid #B36451;
+            color:  #FFFFFF;
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: 0.2em;
+            border-radius: 10px;
+        }
+        .button:hover{
+            background-color:purple;
+        }

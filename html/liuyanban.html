@@ -1,0 +1,117 @@
+﻿<!-- <?php
+session_start();
+if(!isset($_SESSION['username'])){
+ echo '<script>alert("登录超时");location.href="login.html";</script>';
+}
+?> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留言板</title>
+    <link rel="stylesheet" type="text/css" href="test.css" >
+</head>
+<body>
+    <div>
+        <ul class="menu">
+            <li><a href="index.php">首页</a></li>
+            <li><a href="test.html" onclick="c1();">测试</a></li>
+            <li><a href="#" onclick="c1();">心理</a></li>
+            <li><a href="#" onclick="c1();">图库</a></li>
+            <li><a href="#" onclick="c1();">漫画</a></li>
+            <li><a href="#" onclick="c1();">运势</a></li>
+            <li><a href="#" onclick="c1();">博客</a></li>  
+            <li><a href="liuyanban.html" onclick="c1();">留言板</a></li>      
+        </ul>
+    </div>
+    <div class="me">
+        <img src="../star_web/img/backclose.png" width="20" height="20">
+    </div>
+    <div class="unload">
+        <a href="logout.php">注销</a>
+    </div>      
+    <div>
+        <form action="#" method="get">
+            <input class="search" type="text" />
+            <input class="sousuo" type="submit" value="搜索" />
+        </form>
+    </div>
+    <!-- <img class="img1" src="../star_web/img/004.png"> -->
+    <div class="container">
+<!--     <?=$_SESSION['username']?>,欢迎您！ -->
+        <div class="header">
+        <!-- <img src="../star_web/img/002.png">
+        <img src="../star_web/img/002.png">
+        <img src="../star_web/img/003.png"> -->
+            <div class="box1">
+                <a href="#"><img src="../star_web/img/logo.jpg" alt="LOGO"  width="200.8" height=150" id="Insert_logo" ></a>
+            </div>
+            <div>
+                <h1>我要留言</h1>
+            </div>
+            <div>
+                <ul class="box2">
+                    <li><a class="shouye" href="#">设为首页</a></li>   
+                    <li><a class="shoucang" href="#">加入收藏</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="sidebar">
+              <ul class="nav">
+                <li><a href="#" onclick="c1();">猜你喜欢</a></li>
+                <li><a href="#" onclick="c1();">最新</a></li>
+                <li><a href="#" onclick="c1();">论坛</a></li>
+                <li><a href="#" onclick="c1();">运势</a></li>
+                <li><a href="#" onclick="c1();">话题</a></li>
+                <li><a href="#" onclick="c1();">名家</a></li>
+                <li><a href="#" onclick="c1();">民俗</a></li>
+                <li><a href="#" onclick="c1();">答疑</a></li>
+                <li><a href="#" onclick="c1();">更多</a></li>
+            </ul>
+        </div>
+        <div class="content">
+             <div class="test">  
+                <div id="post">  
+                    <h4>文章评论</h4>  
+                    <form action="exec.php" method="post" name="myform" onsubmit="return check();">
+                        <p><textarea class="input" id="txt" name="author" style="width:80%; height:30px;font-size: 18px;font-weight: bolder;" autofocus placeholder="留言人："></textarea></p>
+                        <p><textarea class="input" id="txt" name="title" style="width:80%; height:50px;font-size: 18px;font-weight: bolder;" placeholder="主题：" autofocus></textarea></p>
+                        <p><textarea class="input" id="txt" name="comment" style="width:80%; height:200px;font-size: 18px;font-weight: bolder;" placeholder="留言内容："></textarea></p>
+                        <p><button class="submit" type="submit">发表</button></p>
+                        </form>  
+                <div id="message"></div>  
+            </div>  
+            <div id="comments"></div>  
+            </div>
+        </div>
+        <div class="footer">
+           <div class="tt">
+                <a onclick="pageScroll()"><img width="70" height=70" src="../star_web/img/top5.png"></a>
+           </div>
+        </div>
+    </div> 
+    <div class="foot">
+                <p>&nbsp;&nbsp;星座频道意见反馈留言板&nbsp;&nbsp;&nbsp;&nbsp;电话:18531468781&nbsp;&nbsp;&nbsp;&nbsp;欢迎批评指正</p>
+               <p>银河星座网简介 | About Sina | 广告服务 | 招聘信息 | 网站律师 | SINA English | 通行证注册 | 产品答疑</p>     
+               <p>Copyright © 1996-star_web DDY Corporation, All Rights Reserved     银河星座网公司     版权所有</p>
+    </div>
+    <script src="index.js" ></script>
+    <script>
+    function check(){
+        var title=myform.title.value;
+        var comment=myform.comment.value;
+         if (title.length==0) {
+            alert('请输入主题！');
+            myform.title.focus();
+            return false;
+        }
+        if (comment.length==0) {
+            alert('请输入留言内容！');
+            myform.comment.focus();
+            return false;
+        }
+      return true;
+    }
+        </script>
+</body>
+</html>

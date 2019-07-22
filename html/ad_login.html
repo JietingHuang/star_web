@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="ad_login.css" >
+</head>
+<body>
+<form action="acheck.php" method="post" onsubmit="return check()" name="frm">
+        <div class="container">
+            <div class="one">
+                <h3>管理员登录</h3>
+            </div>
+            <div class="two">
+                <input class="input" type="text" name="id" placeholder="请输入您的编号" class="text" autofocus />
+            </div>
+            <div class="two">
+                <input class="input" type="text" name="Aname" placeholder="请输入您的管理员名" class="text" />
+            </div>
+            <div class="two">
+                <input class="input" type="password" name="password" placeholder="请输入您的管理员密码" class="text" />
+            </div>
+            <div class="three">  
+                <a href="index.php">返回首页</a>
+            </div>
+            <div class="four">
+                <input class="button" type="submit" value="登录" />      
+            </div> 
+        </div>  
+    </form>
+<script>
+    //前端数据验证
+    function check(){
+        var id=frm.id.value;
+         var name=frm.Aname.value;
+         var password=frm.password.value;
+         if (id.length==0) {
+            alert('请输入您的编号！');
+            frm.Aname.focus();
+            return false;
+        }
+        if (name.length==0) {
+            alert('请输入您的管理员名！');
+            frm.Aname.focus();
+            return false;
+        }     
+        if(password.length==0){
+            alert('请输入您的管理员密码！');
+            frm.password.focus();
+            return false;
+        }
+      return true;
+    }
+</script>
+</body>
+</html>
+
